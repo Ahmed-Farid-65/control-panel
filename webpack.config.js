@@ -76,5 +76,17 @@ module.exports = {
             filename: "index.html",
             template: "./src/index.html",
         }),
+        new HtmlWebpagkPlugin({
+            filename: "components/button.html",
+            template: "./src/components/button.html",
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "components/textfield.html",
+            template: "./src/components/textfield.html",
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "components/card.html",
+            template: "./src/components/card.html",
+        }),
     ]
 }
