@@ -57,6 +57,17 @@ module.exports = {
                     }
                 ]
             },
+
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                    presets: ['@babel/preset-env']
+                    }
+                }
+            }
         ]
     },
 
@@ -87,6 +98,10 @@ module.exports = {
         new HtmlWebpagkPlugin({
             filename: "components/card.html",
             template: "./src/components/card.html",
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "components/banner.html",
+            template: "./src/components/banner.html",
         }),
     ]
 }

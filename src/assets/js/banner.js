@@ -1,6 +1,3 @@
-import './assets/sass/styles.scss';
-import 'normalize.css/normalize.css'
-console.log("hello webpack");
 (function () {
     const closeBanners= document.querySelectorAll(".c-banner__close");
     closeBanners.forEach(closeBanner => {
