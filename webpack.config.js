@@ -5,12 +5,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
     entry: {
-        "app": "./src/index.js",
+        "app":              "./src/index.js",
+        'assets/js/banner': './src/assets/js/banner.js',
     },
     output: {
         path: path.join(__dirname, "/app"),
         publicPath: '/',
-        filename: "app.js",
+        filename: "[name].js",
     },
     devServer: {
         static: {
@@ -86,22 +87,27 @@ module.exports = {
         new HtmlWebpagkPlugin({
             filename: "index.html",
             template: "./src/index.html",
+            chunks: ['app']
         }),
         new HtmlWebpagkPlugin({
             filename: "components/button.html",
             template: "./src/components/button.html",
+            chunks: ['app']
         }),
         new HtmlWebpagkPlugin({
             filename: "components/textfield.html",
             template: "./src/components/textfield.html",
+            chunks: ['app']
         }),
         new HtmlWebpagkPlugin({
             filename: "components/card.html",
             template: "./src/components/card.html",
+            chunks: ['app']
         }),
         new HtmlWebpagkPlugin({
             filename: "components/banner.html",
             template: "./src/components/banner.html",
+            chunks: ['app', 'assets/js/banner']
         }),
     ]
 }
