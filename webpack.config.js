@@ -7,6 +7,7 @@ module.exports = {
     entry: {
         "app":              "./src/index.js",
         'assets/js/banner': './src/assets/js/banner.js',
+        'assets/js/tabs': './src/assets/js/tabs.js',
     },
     output: {
         path: path.join(__dirname, "/app"),
@@ -54,6 +55,20 @@ module.exports = {
                         options: {
                             name: "[name].[ext]",
                             outputPath: "assets/fonts",
+                        }
+                    }
+                ]
+            },
+
+            {
+                test: /\.(jpeg|jpg|png|webp|svg)$/,
+                exclude: /fonts/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "assets/images",
                         }
                     }
                 ]
@@ -108,6 +123,16 @@ module.exports = {
             filename: "components/banner.html",
             template: "./src/components/banner.html",
             chunks: ['app', 'assets/js/banner']
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "components/list.html",
+            template: "./src/components/list.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "components/tabs.html",
+            template: "./src/components/tabs.html",
+            chunks: ['app', 'assets/js/tabs']
         }),
     ]
 }

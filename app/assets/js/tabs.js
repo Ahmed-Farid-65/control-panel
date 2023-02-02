@@ -20,13 +20,13 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 
 /***/ }),
 
-/***/ "./src/assets/js/banner.js":
-/*!*********************************!*\
-  !*** ./src/assets/js/banner.js ***!
-  \*********************************/
+/***/ "./src/assets/js/tabs.js":
+/*!*******************************!*\
+  !*** ./src/assets/js/tabs.js ***!
+  \*******************************/
 /***/ (() => {
 
-eval("(function () {\n  var closeBanners = document.querySelectorAll(\".js-banner-close\");\n  closeBanners.forEach(function (closeBanner) {\n    closeBanner.addEventListener(\"click\", function (event) {\n      var banner = event.target.parentNode;\n      banner.classList.add(\"collapse\");\n      banner.addEventListener(\"transitionend\", function (event) {\n        if (event.target === this) {\n          this.remove();\n        }\n      });\n    });\n  });\n})();\n\n//# sourceURL=webpack://control-panel/./src/assets/js/banner.js?");
+eval("(function () {\n  var tabs = document.querySelectorAll(\".js-tabs\");\n  Array.from(tabs, function (tab) {\n    var tabsLinks = tab.querySelectorAll(\".js-tab-link\");\n    var currentActiveTab = tab.querySelector(\".js-tab-link.active\");\n    var toggleTab = function toggleTab() {\n      var toggledTabLink = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : currentActiveTab;\n      currentActiveTab = toggledTabLink || currentActiveTab;\n      toggledTabLink.classList.toggle(\"active\");\n      var toggledTabData = toggledTabLink.dataset.index;\n      var toggledTabArea = tab.querySelector(\".js-tabarea[data-indexed=\".concat(toggledTabData, \"]\"));\n      toggledTabArea.classList.toggle(\"active\");\n    };\n    if (!currentActiveTab) {\n      toggleTab(tabsLinks[0]);\n    }\n    tabsLinks.forEach(function (tabsLink) {\n      tabsLink.addEventListener(\"click\", function (event) {\n        if (currentActiveTab === this) {\n          return;\n        }\n        if (currentActiveTab) {\n          toggleTab();\n        }\n        toggleTab(this);\n      });\n    });\n  });\n})();\n\n//# sourceURL=webpack://control-panel/./src/assets/js/tabs.js?");
 
 /***/ }),
 
@@ -345,7 +345,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	(() => {
-/******/ 		__webpack_require__.hmrF = () => ("assets_js_banner." + __webpack_require__.h() + ".hot-update.json");
+/******/ 		__webpack_require__.hmrF = () => ("assets_js_tabs." + __webpack_require__.h() + ".hot-update.json");
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
@@ -913,7 +913,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = __webpack_require__.hmrS_jsonp = __webpack_require__.hmrS_jsonp || {
-/******/ 			"assets/js/banner": 0
+/******/ 			"assets/js/tabs": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1427,7 +1427,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 	// Load entry module and return exports
 /******/ 	__webpack_require__("./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=8080&pathname=%2Fws&logging=info&overlay=true&reconnect=10&hot=true&live-reload=true");
 /******/ 	__webpack_require__("./node_modules/webpack/hot/dev-server.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/assets/js/banner.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/assets/js/tabs.js");
 /******/ 	
 /******/ })()
 ;
