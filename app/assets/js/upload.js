@@ -20,13 +20,13 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 
 /***/ }),
 
-/***/ "./src/assets/js/banner.js":
+/***/ "./src/assets/js/upload.js":
 /*!*********************************!*\
-  !*** ./src/assets/js/banner.js ***!
+  !*** ./src/assets/js/upload.js ***!
   \*********************************/
 /***/ (() => {
 
-eval("(function () {\n  var closeBanners = document.querySelectorAll(\".js-banner-close\");\n  closeBanners.forEach(function (closeBanner) {\n    closeBanner.addEventListener(\"click\", function (event) {\n      var banner = event.target.parentNode;\n      banner.classList.add(\"collapse\");\n      banner.addEventListener(\"transitionend\", function (event) {\n        if (event.target === this) {\n          this.remove();\n        }\n      });\n    });\n  });\n})();\n\n//# sourceURL=webpack://control-panel/./src/assets/js/banner.js?");
+eval("(function () {\n  var uploaders = document.querySelectorAll(\".js-upload\");\n  Array.from(uploaders, function (uploader) {\n    var upload = uploader.querySelector(\".js-upload-value\"),\n      placeholder = uploader.querySelector(\".js-upload-placeholder\"),\n      remove = uploader.querySelector(\".js-upload-remove\");\n    upload.addEventListener(\"change\", function (event) {\n      var img = this.files[0];\n      var reader = new FileReader();\n      reader.readAsDataURL(img);\n      reader.onloadend = function () {\n        uploader.classList.add(\"has-image\");\n        placeholder.src = reader.result;\n      };\n    });\n    remove.addEventListener(\"click\", function (e) {\n      upload.value = null;\n      uploader.classList.remove(\"has-image\");\n      placeholder.src = \"\";\n    });\n  });\n})();\n\n//# sourceURL=webpack://control-panel/./src/assets/js/upload.js?");
 
 /***/ }),
 
@@ -345,7 +345,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	(() => {
-/******/ 		__webpack_require__.hmrF = () => ("assets_js_banner." + __webpack_require__.h() + ".hot-update.json");
+/******/ 		__webpack_require__.hmrF = () => ("assets_js_upload." + __webpack_require__.h() + ".hot-update.json");
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
@@ -913,7 +913,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = __webpack_require__.hmrS_jsonp = __webpack_require__.hmrS_jsonp || {
-/******/ 			"assets/js/banner": 0
+/******/ 			"assets/js/upload": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1427,7 +1427,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /******/ 	// Load entry module and return exports
 /******/ 	__webpack_require__("./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=8080&pathname=%2Fws&logging=info&overlay=true&reconnect=10&hot=true&live-reload=true");
 /******/ 	__webpack_require__("./node_modules/webpack/hot/dev-server.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/assets/js/banner.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/assets/js/upload.js");
 /******/ 	
 /******/ })()
 ;
