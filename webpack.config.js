@@ -140,5 +140,20 @@ module.exports = {
             template: "./src/components/upload.html",
             chunks: ['app', 'assets/js/upload']
         }),
+        new HtmlWebpagkPlugin({
+            filename: "components/help.html",
+            template: "./src/components/help.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "components/summary.html",
+            template: "./src/components/summary.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "components/actions.html",
+            template: "./src/components/actions.html",
+            chunks: ['app']
+        }),
     ]
 }
