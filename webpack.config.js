@@ -160,5 +160,10 @@ module.exports = {
             template: "./src/components/sidebar.html",
             chunks: ['app']
         }),
+        new HtmlWebpagkPlugin({
+            filename: "components/table.html",
+            template: "./src/components/table.html",
+            chunks: ['app']
+        }),
     ]
 }
