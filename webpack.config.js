@@ -9,6 +9,7 @@ module.exports = {
         'assets/js/banner': './src/assets/js/banner.js',
         'assets/js/tabs': './src/assets/js/tabs.js',
         'assets/js/upload': './src/assets/js/upload.js',
+        'assets/js/charts': './src/assets/js/charts.js',
     },
     output: {
         path: path.join(__dirname, "/app"),
@@ -164,6 +165,11 @@ module.exports = {
             filename: "components/table.html",
             template: "./src/components/table.html",
             chunks: ['app']
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "components/chart.html",
+            template: "./src/components/chart.html",
+            chunks: ['app', 'assets/js/charts']
         }),
     ]
 }
