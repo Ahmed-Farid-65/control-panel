@@ -3,6 +3,7 @@ const HtmlWebpagkPlugin= require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 module.exports = {
     entry: {
         "app":              "./src/index.js",
@@ -104,7 +105,7 @@ module.exports = {
         new HtmlWebpagkPlugin({
             filename: "index.html",
             template: "./src/index.html",
-            chunks: ['app']
+            chunks: ['app', 'assets/js/banner', 'assets/js/charts', 'assets/js/tabs']
         }),
         new HtmlWebpagkPlugin({
             filename: "components/button.html",
@@ -170,6 +171,42 @@ module.exports = {
             filename: "components/chart.html",
             template: "./src/components/chart.html",
             chunks: ['app', 'assets/js/charts']
+        }),
+
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/help.html'),
+            location: 'help',
+            template_filename: ['index.html'],
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/sidebar.html'),
+            location: 'sidebar',
+            template_filename: ['index.html'],
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/banner.html'),
+            location: 'banner',
+            template_filename: ['index.html'],
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/tabs.html'),
+            location: 'tabs',
+            template_filename: ['index.html'],
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/chart.html'),
+            location: 'chart',
+            template_filename: ['index.html'],
+        }),
+        // new HtmlWebpackPartialsPlugin({
+        //     path: path.join(__dirname, './src/components/crad.html'),
+        //     location: 'crad',
+        //     template_filename: ['index.html'],
+        // }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/actions.html'),
+            location: 'actions',
+            template_filename: ['index.html'],
         }),
     ]
 }

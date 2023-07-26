@@ -8,6 +8,53 @@
     <script type=text/html src="{require('./index.js')}"></script>
 </head>
 <body>
-    <h1>hello webpack from live server try Clean Webpack Plugin</h1>  
+    <div class="page-container">
+        <sidebar></sidebar>
+        <div class="main-page">
+            <header class="home-intro">
+                <h2 class="welcome-tag">
+                    مرحبا احمد، اتمنى لك يوما جميلا<br>
+                    شاهد اخر ماحدث في متجرك
+                </h2>
+                <div class="c-summary">
+                    <div class="c-summary__data">
+                        <span class="c-summary__value">34</span>
+                        <span class="c-summary__key">طلب</span>
+                    </div>
+                    <div class="c-summary__data">
+                        <span class="c-summary__value">1343</span>
+                        <span class="c-summary__key">زائر</span>
+                    </div>
+                    <div class="c-summary__data">
+                        <span class="c-summary__value">$4324</span>
+                        <span class="c-summary__key">مبيعات</span>
+                    </div>
+                </div>
+            </header>
+
+            <actions></actions>
+            <div class="c-card">
+                <h3 class="c-card__title">معلومات الشحن غير موجوده</h3>
+                <a href="#" class="c-btn c-btn--primary c-card__action">ربط معلومات الشحن</a>
+                <p class="c-card__desc">هذه فقرة ليس لها معنى ولكنها موجوده لتأدية مهمة وهي انني اريد رؤية التنسيقات عليها</p>
+            </div>
+            <div class="c-card c-card--no-description">
+                <h3 class="c-card__title">معلومات الشحن غير موجوده</h3>
+                <a href="#" class="c-btn c-btn--primary c-card__action">ربط معلومات الشحن</a>
+            </div>
+            <div class="c-card c-card--no-action">
+                <h3 class="c-card__title">معلومات الشحن غير موجوده</h3>
+                <p class="c-card__desc">هذه فقرة ليس لها معنى ولكنها موجوده لتأدية مهمة وهي انني اريد رؤية التنسيقات عليها</p>
+            </div>
+
+            <banner></banner>
+
+            <chart></chart>
+            
+            <tabs></tabs>
+
+            <help></help>
+        </div>
+    </div>
 </body>
 </html>

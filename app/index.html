@@ -6,8 +6,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الصفحة الرئيسية</title>
     <script type=text/html src="{require('./index.js')}"></script>
-<script defer src="/app.js"></script><link href="/css/style.css" rel="stylesheet"></head>
+<script defer src="/app.js"></script><script defer src="/assets/js/banner.js"></script><script defer src="/assets/js/tabs.js"></script><script defer src="/assets/js/charts.js"></script><link href="/css/style.css" rel="stylesheet"></head>
 <body>
-    <h1>hello webpack from live server try Clean Webpack Plugin</h1>  
+    <div class="page-container">
+        <sidebar>
+<div class="c-sidebar">
+    <div class="c-sidebar__control">
+        <a href="../index.html" class="c-sidebar__icon c-sidebar__logo c-sidebar__icon--large">
+            <svg viewbox="0 0 35 35">
+                <circle cx="17.5" cy="17.5" r="12" fill="transparent" stroke-width="10"></circle>
+            </svg>
+        </a>
+        <a href="add-product.html" class="c-sidebar__icon"><i class="c-icon c-icon--plus"></i></a>
+        <a href="#search" class="c-sidebar__icon"><i class="c-icon c-icon--search"></i></a>
+        <a href="#logout" class="c-sidebar__icon"><i class="c-icon c-icon--switch"></i></a>
+        <a href="profile" class="c-sidebar__icon c-sidebar__icon--bottom c-sidebar__icon--large c-sidebar__icon--image">
+            <img src="../assets/images/profile.png" alt="">
+        </a>
+    </div>
+    <div class="c-sidebar__menu">
+        <h2 class="c-sidebar__title"><a href="index.html">عربي</a></h2>
+        <nav class="c-sidebar__navigation">
+            <a href="" class="c-sidebar__link">نظرة عامة<i class="c-icon c-icon--equalizer"></i></a>
+            <a href="" class="c-sidebar__link">المنتجات<i class="c-icon c-icon--cart"></i></a>
+            <a href="" class="c-sidebar__link">المستخدين<i class="c-icon c-icon--user"></i></a>
+            <a href="" class="c-sidebar__link">الطلبات<i class="c-icon c-icon--file-text"></i></a>
+        </nav>
+    </div>
+</div>
+</sidebar>
+        <div class="main-page">
+            <header class="home-intro">
+                <h2 class="welcome-tag">
+                    مرحبا احمد، اتمنى لك يوما جميلا<br>
+                    شاهد اخر ماحدث في متجرك
+                </h2>
+                <div class="c-summary">
+                    <div class="c-summary__data">
+                        <span class="c-summary__value">34</span>
+                        <span class="c-summary__key">طلب</span>
+                    </div>
+                    <div class="c-summary__data">
+                        <span class="c-summary__value">1343</span>
+                        <span class="c-summary__key">زائر</span>
+                    </div>
+                    <div class="c-summary__data">
+                        <span class="c-summary__value">$4324</span>
+                        <span class="c-summary__key">مبيعات</span>
+                    </div>
+                </div>
+            </header>
+
+            <actions>
+<ul class="c-actions">
+    <li class="c-action">
+        <span class="c-action__title">طلبات تحتاج المعالجة 10</span>
+        <a href="" class="c-btn c-actin__link">مشاهدة الطلبات</a>
+    </li>
+    <li class="c-action">
+        <span class="c-action__title">  رسائل تحتاج الاجابة 5</span>
+        <a href="" class="c-btn c-actin__link">مشاهدة الرسائل</a>
+    </li>
+    <li class="c-action">
+        <span class="c-action__title">  منتجات ضرورية على وشك النفاذ 3</span>
+        <a href="" class="c-btn c-actin__link">مشاهدة المنتجات</a>
+    </li>
+</ul>
+</actions>
+            <div class="c-card">
+                <h3 class="c-card__title">معلومات الشحن غير موجوده</h3>
+                <a href="#" class="c-btn c-btn--primary c-card__action">ربط معلومات الشحن</a>
+                <p class="c-card__desc">هذه فقرة ليس لها معنى ولكنها موجوده لتأدية مهمة وهي انني اريد رؤية التنسيقات عليها</p>
+            </div>
+            <div class="c-card c-card--no-description">
+                <h3 class="c-card__title">معلومات الشحن غير موجوده</h3>
+                <a href="#" class="c-btn c-btn--primary c-card__action">ربط معلومات الشحن</a>
+            </div>
+            <div class="c-card c-card--no-action">
+                <h3 class="c-card__title">معلومات الشحن غير موجوده</h3>
+                <p class="c-card__desc">هذه فقرة ليس لها معنى ولكنها موجوده لتأدية مهمة وهي انني اريد رؤية التنسيقات عليها</p>
+            </div>
+
+            <banner>
+<div class="c-banner ">
+    <h3 class="c-banner__title">بوابة الدفع عبر بايونير متاحة!</h3>
+    <p class="c-banner__desc">هذه فقرة ليس لها معنى ولكنها موجوده لتأدية مهمة وهي انني اريد رؤية التنسيقات عليها</p>
+    <a href="#" class="c-btn c-btn--ghost c-banner__action">اكتشف المزيد</a>
+    <i class="c-icon c-icon--flag c-banner__icon"></i>
+    <i class="c-icon c-icon--cancel-circle c-banner__close js-banner-close"></i>
+</div>
+</banner>
+
+            <chart>
+<div class="c-chart" data-values="[423,532,658,1266,644,802,1205,655,1002,433,722]">
+    <header class="c-chart__header">
+        <div class="c-chart__header__title">
+            <h3 class="c-chart__title">المبيعات</h3>
+            <span class="c-chart__data">1 2020 نوفمبر</span>
+        </div>
+        <div class="c-summary c-summary--small c-summary--boxless">
+            <div class="c-summary__data">
+                <span class="c-summary__key">التغير الشهري</span>
+                <span class="c-summary__value c-summary__value--positive">16.6%</span>
+            </div>
+            <div class="c-summary__data">
+                <span class="c-summary__key">المجموع</span>
+                <span class="c-summary__value">$9875</span>
+            </div>
+            <div class="c-summary__data">
+                <span class="c-summary__key">اخر ثلاثين سوم</span>
+                <span class="c-summary__value">$2324</span>
+            </div>
+        </div>
+        <div class="c-table__navigation">
+            <div class="c-table__navigation__arrows">
+                <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-right2"></i></button>
+                <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-left2"></i></button>
+            </div>
+        </div>
+    </header>
+    <canvas class="c-chart__data" id="example-chart" width="600" height="300"></canvas>
+</div>
+</chart>
+            
+            <tabs>
+<div class="c-tabs js-tab">
+    <div class="c-tabs__control">
+        <span class="c-tabs__tab js-tab-link active" data-index="orders">طلبات بحاجة للمراجعة</span>
+        <span class="c-tabs__tab js-tab-link" data-index="products">منتجات على وشك النفاذ</span>
+        <span class="c-tabs__tab js-tab-link" data-index="clients">زبائن جدد</span>
+    </div>
+    <div class="c-tabs__content">
+        <div class="c-tabs__tabarea js-tabarea active" data-indexed="orders">
+            <div class="c-list">
+                <img src="../assets/images/black-shirt.jpg" alt="black-shirt" class="c-list__media">
+                <span class="c-list__data">قميص اسود M</span>
+                <span class="c-list__data">احمد فريد</span>
+                <span class="c-list__data">القاهرة - مصر</span>
+                <span class="c-list__data">19.99$</span>
+                <div class="c-list__action">
+                    <a href="#" class="c-btn c-btn--primary c-btn--small">تم الشحن</a>
+                    <a href="#" class="c-btn c-btn--small">تواصل</a>
+                    <a href="#" class="c-btn c-btn--destructive c-btn--small">حذف الطلب</a>
+                </div>
+            </div>
+        </div>
+        <div class="c-tabs__tabarea js-tabarea" data-indexed="products">
+            <div class="c-list">
+                <img src="../assets/images/black-shirt.jpg" alt="black-shirt" class="c-list__media">
+                <span class="c-list__data">قميص اسود M</span>
+                <span class="c-list__data">احمد فريد</span>
+                <span class="c-list__data">القاهرة - مصر</span>
+                <span class="c-list__data">19.99$</span>
+                <div class="c-list__action">
+                    <a href="#" class="c-btn c-btn--primary c-btn--small">تم الشحن</a>
+                    <a href="#" class="c-btn c-btn--small">تواصل</a>
+                    <a href="#" class="c-btn c-btn--destructive c-btn--small">حذف الطلب</a>
+                </div>
+            </div>
+        </div>
+        <div class="c-tabs__tabarea js-tabarea" data-indexed="clients">
+            <div class="c-list">
+                <img src="../assets/images/black-shirt.jpg" alt="black-shirt" class="c-list__media">
+                <span class="c-list__data">قميص اسود M</span>
+                <span class="c-list__data">احمد فريد</span>
+                <span class="c-list__data">القاهرة - مصر</span>
+                <span class="c-list__data">19.99$</span>
+                <div class="c-list__action">
+                    <a href="#" class="c-btn c-btn--primary c-btn--small">تم الشحن</a>
+                    <a href="#" class="c-btn c-btn--small">تواصل</a>
+                    <a href="#" class="c-btn c-btn--destructive c-btn--small">حذف الطلب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</tabs>
+
+            <help>
+<div class="c-help">
+    <i class="c-help__icon c-icon c-icon--lifebuoy"></i>
+    <div>
+        <span class="c-icon__title">تعلم المزيد حول</span>
+        <a href="../index.html" class="c-help__link">المنتجات</a>
+    </div>
+</div></help>
+        </div>
+    </div>
 </body>
 </html>
