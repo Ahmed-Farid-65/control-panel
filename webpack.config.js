@@ -108,6 +108,26 @@ module.exports = {
             chunks: ['app', 'assets/js/banner', 'assets/js/charts', 'assets/js/tabs']
         }),
         new HtmlWebpagkPlugin({
+            filename: "add-product.html",
+            template: "./src/add-product.html",
+            chunks: ['app', 'assets/js/upload']
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "product.html",
+            template: "./src/product.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "users.html",
+            template: "./src/users.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpagkPlugin({
+            filename: "orders.html",
+            template: "./src/orders.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpagkPlugin({
             filename: "components/button.html",
             template: "./src/components/button.html",
             chunks: ['app']
@@ -176,12 +196,12 @@ module.exports = {
         new HtmlWebpackPartialsPlugin({
             path: path.join(__dirname, './src/components/help.html'),
             location: 'help',
-            template_filename: ['index.html'],
+            template_filename: ['index.html','add-product.html','product.html','users.html','orders.html'],
         }),
         new HtmlWebpackPartialsPlugin({
             path: path.join(__dirname, './src/components/sidebar.html'),
             location: 'sidebar',
-            template_filename: ['index.html'],
+            template_filename: ['index.html', 'add-product.html','product.html','users.html','orders.html'],
         }),
         new HtmlWebpackPartialsPlugin({
             path: path.join(__dirname, './src/components/banner.html'),

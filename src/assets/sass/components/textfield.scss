@@ -25,6 +25,15 @@
                     0 0 0 2px $color-primary;
     }
 
+    &--left::placeholder{
+        direction: rtl;
+        text-align: left;
+    }
+
+}
+
+.c-textfield__textarea{
+    height: 150px;
 }
 
 .c-textfield__hint {

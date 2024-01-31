@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستخدمين</title>
+<script defer src="/app.js"></script><link href="/css/style.css" rel="stylesheet"></head>
+<body>
+    <div class="page-container">
+        <sidebar>
+<div class="c-sidebar">
+    <div class="c-sidebar__control">
+        <a href="../index.html" class="c-sidebar__icon c-sidebar__logo c-sidebar__icon--large">
+            <svg viewbox="0 0 35 35">
+                <circle cx="17.5" cy="17.5" r="12" fill="transparent" stroke-width="10"></circle>
+            </svg>
+        </a>
+        <a href="add-product.html" class="c-sidebar__icon"><i class="c-icon c-icon--plus"></i></a>
+        <a href="#search" class="c-sidebar__icon"><i class="c-icon c-icon--search"></i></a>
+        <a href="#logout" class="c-sidebar__icon"><i class="c-icon c-icon--switch"></i></a>
+        <a href="profile" class="c-sidebar__icon c-sidebar__icon--bottom c-sidebar__icon--large c-sidebar__icon--image">
+            <img src="../assets/images/profile.png" alt="">
+        </a>
+    </div>
+    <div class="c-sidebar__menu">
+        <h2 class="c-sidebar__title"><a href="index.html">عربي</a></h2>
+        <nav class="c-sidebar__navigation">
+            <a href="" class="c-sidebar__link">نظرة عامة<i class="c-icon c-icon--equalizer"></i></a>
+            <a href="product.html" class="c-sidebar__link">المنتجات<i class="c-icon c-icon--cart"></i></a>
+            <a href="usres.html" class="c-sidebar__link">المستخدين<i class="c-icon c-icon--user"></i></a>
+            <a href="" class="c-sidebar__link">الطلبات<i class="c-icon c-icon--file-text"></i></a>
+        </nav>
+    </div>
+</div>
+</sidebar>
+        <div class="single-page">
+            <header class="page-header">
+                <h1 class="page-title">المستخدمين</h1>
+                <button class="c-btn" type="submit" name="add-user">اضافة مسخدم</button>
+            </header>
+            <div class="c-table c-table--select-all">
+                <header class="c-table__header">
+                    <h3 class="c-table__title">المستخدمين</h3>
+                    <div class="c-table__actions"><button class="c-btn c-btn--destructive c-btn--slim">حذف</button></div>
+                    <div class="c-table__navigation">
+                        <span class="c-table__navigation__caption">6 من اصل 24</span>
+                        <div class="c-table__navigation__arrows">
+                            <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-right2"></i></button>
+                            <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-left2"></i></button>
+                        </div>
+                    </div>
+                </header>
+                <table class="c-table__data">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="select-all"></th>
+                            <th><label for="select-all">تحديد الكل</label></th>
+                            <th>اسم المستخدم</th>
+                            <th>البريد الالكتروني</th>
+                            <th>عدد المنتجات</th>
+                            <th>المبيعات</th>
+                            <th>الرصيد</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" id="item-1" name="item-1"></td>
+                            <td><img src="/assets/images/profile.png" alt="profile-shirt"></td>
+                            <td>Ahmed Farid</td>
+                            <td>ahmed.far@gamil.com</td>
+                            <td>12</td>
+                            <td>995.32</td>
+                            <td>1300.</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="item-2" name="item-2"></td>
+                            <td><img src="/assets/images/profile.png" alt="profile-shirt"></td>
+                            <td>Farid momo</td>
+                            <td>faaa.far@gamil.com</td>
+                            <td>60</td>
+                            <td>695.32</td>
+                            <td>1254.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="item-3" name="item-3"></td>
+                            <td><img src="/assets/images/profile.png" alt="profile-shirt"></td>
+                            <td>ibra Farid</td>
+                            <td>llaa.saed@gamil.com</td>
+                            <td>9</td>
+                            <td>664.32</td>
+                            <td>654.22</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="item-4" name="item-4"></td>
+                            <td><img src="/assets/images/profile.png" alt="profile-shirt"></td>
+                            <td>Ahmed saied</td>
+                            <td>ahmedfa.lll@gamil.com</td>
+                            <td>46</td>
+                            <td>325.32</td>
+                            <td>4500.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="item-5" name="item-5"></td>
+                            <td><img src="/assets/images/profile.png" alt="profile-shirt"></td>
+                            <td>Farid AHmed</td>
+                            <td>ahmed.aaaaa@gamil.com</td>
+                            <td>50</td>
+                            <td>785.32</td>
+                            <td>9900.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer class="c-table__footer">
+                    <div class="c-table__navigation">
+                        <span class="c-table__navigation__caption">6 من اصل 24</span>
+                        <div class="c-table__navigation__arrows">
+                            <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-right2"></i></button>
+                            <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-left2"></i></button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <help>
+<div class="c-help">
+    <i class="c-help__icon c-icon c-icon--lifebuoy"></i>
+    <div>
+        <span class="c-icon__title">تعلم المزيد حول</span>
+        <a href="../index.html" class="c-help__link">المنتجات</a>
+    </div>
+</div></help>
+        </div>
+    </div>
+</body>
+</html>
