@@ -1,9 +1,10 @@
+$container-horizontal-spacing: spacing("small");
 .c-list {
     display: flex;
     align-items: center;
     width: 100%;
     background-color: #fff;
-    padding: spacing("extra-small") spacing("small");
+    padding: spacing("extra-small") $container-horizontal-spacing;
     box-shadow: 0 0 0 1px rgba(black, 0.05);
 }
 
@@ -31,4 +32,30 @@
 
 .c-list--table-row {
     display: table-row;
+}
+
+//responsive
+
+@media (max-width: $pb-tablet-small) {
+    .c-list {
+        flex-wrap: wrap;
+    }
+
+    .c-list__action{
+        opacity: 1;
+        text-align: right;
+        margin-left: initial;
+        margin-right: 0;
+    }
+
+    .c-list__data:not(:first-of-type), .c-list__action {
+        width: 100%;
+        padding-top: spacing("extra-small");
+        padding-bottom: spacing("extra-small");
+        border-top: 1px solid #f8f8f8;
+        margin-left: -$container-horizontal-spacing;
+        margin-right: -$container-horizontal-spacing;
+        padding-left: $container-horizontal-spacing;
+        padding-right: $container-horizontal-spacing;
+    }
 }

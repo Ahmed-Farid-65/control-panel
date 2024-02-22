@@ -106,3 +106,12 @@
         }
     }
 }
+
+//responsive
+
+@media (max-width:400px) {
+    .c-upload{
+        min-width: initial;
+        width: 100%;
+    }
+}
